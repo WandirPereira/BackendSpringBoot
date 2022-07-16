@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c57f486-6569-49f4-ba6a-9f16d0cd8fe4" name="Default Changelist" comment="" />
+    <list default="true" id="3c57f486-6569-49f4-ba6a-9f16d0cd8fe4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/AnimalConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Cachorro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Development.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Gato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/LocalConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/LocalConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/VendasApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/VendasApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/LocalConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/LocalConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/VendasApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/VendasApplication.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,9 +23,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2BxP5lJn8TOQyGLeaVOX0latYpC" />
   <component name="ProjectViewState">
@@ -22,10 +40,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wandi\vendas\com.github.wandirpereira\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="VendasApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -69,33 +93,42 @@
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
     <state x="5620" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657844959635" />
+    <state x="5927" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1657934263200">
+      <screen x="5206" y="0" width="1920" height="1040" />
+    </state>
+    <state x="5927" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657934263200" />
+    <state x="5751" y="47" key="CommitChangelistDialog2" timestamp="1657931235359">
+      <screen x="5206" y="0" width="1920" height="1040" />
+    </state>
+    <state x="5751" y="47" key="CommitChangelistDialog2/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657931235359" />
     <state x="5996" y="300" key="FileChooserDialogImpl" timestamp="1657846279292">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
     <state x="5996" y="300" key="FileChooserDialogImpl/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657846279292" />
-    <state width="1867" height="454" key="GridCell.Tab.0.bottom" timestamp="1657849248115">
+    <state width="1865" height="518" key="GridCell.Tab.0.bottom" timestamp="1657935163152">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="454" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657849248115" />
-    <state width="1867" height="454" key="GridCell.Tab.0.center" timestamp="1657849248115">
+    <state width="1865" height="518" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657935163152" />
+    <state width="1865" height="518" key="GridCell.Tab.0.center" timestamp="1657935163151">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="454" key="GridCell.Tab.0.center/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657849248115" />
-    <state width="1867" height="454" key="GridCell.Tab.0.left" timestamp="1657849248114">
+    <state width="1865" height="518" key="GridCell.Tab.0.center/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657935163151" />
+    <state width="1865" height="518" key="GridCell.Tab.0.left" timestamp="1657935163151">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="454" key="GridCell.Tab.0.left/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657849248114" />
-    <state width="1867" height="454" key="GridCell.Tab.0.right" timestamp="1657849248115">
+    <state width="1865" height="518" key="GridCell.Tab.0.left/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657935163151" />
+    <state width="1865" height="518" key="GridCell.Tab.0.right" timestamp="1657935163151">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="454" key="GridCell.Tab.0.right/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657849248115" />
+    <state width="1865" height="518" key="GridCell.Tab.0.right/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657935163151" />
     <state x="5667" y="155" key="SettingsEditor" timestamp="1657845051671">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
     <state x="5667" y="155" key="SettingsEditor/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657845051671" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1657844605953">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="5739" y="269" key="com.intellij.ide.util.TipDialog" timestamp="1657931085433">
+      <screen x="5206" y="0" width="1920" height="1040" />
     </state>
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@0.0.1366.728" timestamp="1657844605953" />
+    <state x="5739" y="269" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657931085433" />
   </component>
 </project>
