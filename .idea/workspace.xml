@@ -2,17 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c57f486-6569-49f4-ba6a-9f16d0cd8fe4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/AnimalConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Cachorro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Development.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Gato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/LocalConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/LocalConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/AnimalConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Cachorro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Development.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/Gato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/LocalConfiguration.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/VendasApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/wandirpereira/VendasApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-development.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-production.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-development.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-production.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/LocalConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/LocalConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/AnimalConfiguration$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/AnimalConfiguration$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/AnimalConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/Cachorro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/Development.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/Gato.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/LocalConfiguration.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/VendasApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/wandirpereira/VendasApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +109,10 @@
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
     <state x="5927" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657934263200" />
+    <state x="5833" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1657935579843">
+      <screen x="5206" y="0" width="1920" height="1040" />
+    </state>
+    <state x="5833" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657935579843" />
     <state x="5751" y="47" key="CommitChangelistDialog2" timestamp="1657931235359">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
@@ -105,22 +121,22 @@
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
     <state x="5996" y="300" key="FileChooserDialogImpl/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657846279292" />
-    <state width="1865" height="518" key="GridCell.Tab.0.bottom" timestamp="1657935163152">
+    <state width="1865" height="464" key="GridCell.Tab.0.bottom" timestamp="1657936501290">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="518" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657935163152" />
-    <state width="1865" height="518" key="GridCell.Tab.0.center" timestamp="1657935163151">
+    <state width="1865" height="464" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657936501290" />
+    <state width="1865" height="464" key="GridCell.Tab.0.center" timestamp="1657936501290">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="518" key="GridCell.Tab.0.center/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657935163151" />
-    <state width="1865" height="518" key="GridCell.Tab.0.left" timestamp="1657935163151">
+    <state width="1865" height="464" key="GridCell.Tab.0.center/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657936501290" />
+    <state width="1865" height="464" key="GridCell.Tab.0.left" timestamp="1657936501290">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="518" key="GridCell.Tab.0.left/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657935163151" />
-    <state width="1865" height="518" key="GridCell.Tab.0.right" timestamp="1657935163151">
+    <state width="1865" height="464" key="GridCell.Tab.0.left/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657936501290" />
+    <state width="1865" height="464" key="GridCell.Tab.0.right" timestamp="1657936501290">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="518" key="GridCell.Tab.0.right/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657935163151" />
+    <state width="1865" height="464" key="GridCell.Tab.0.right/0.0.1366.728/1366.-197.1536.824/3286.-201.1920.999/5206.0.1920.1040@5206.0.1920.1040" timestamp="1657936501290" />
     <state x="5667" y="155" key="SettingsEditor" timestamp="1657845051671">
       <screen x="5206" y="0" width="1920" height="1040" />
     </state>
