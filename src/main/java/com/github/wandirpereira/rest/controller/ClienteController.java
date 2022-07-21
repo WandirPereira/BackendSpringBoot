@@ -2,6 +2,7 @@ package com.github.wandirpereira.rest.controller;
 
 import com.github.wandirpereira.domain.entity.Cliente;
 import com.github.wandirpereira.domain.repository.ClientesRepository;
+import com.github.wandirpereira.service.impl.ClienteService;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
@@ -15,37 +16,27 @@ import java.util.List;
 @RequestMapping("/api/clientes")
 public class ClienteController {
 
-    private ClientesRepository clientesRepository;
+    private ClienteService clienteService;
 
-    public ClienteController( ClientesRepository clientesRepository ) {
-        this.clientesRepository = clientesRepository;
+    public ClienteController( ClienteService clienteService ) {
+        this.clienteService = clienteService;
     }
 
     @GetMapping("{id}")
     public Cliente getClienteById( @PathVariable Integer id ){
-        return clientesRepository
-                .findById(id)
-                .orElseThrow(() ->
-                        new ResponseStatusException(HttpStatus.NOT_FOUND,
-                                "Cliente não encontrado"));
+        return clienteService.buscarClienteById(id);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Cliente save( @RequestBody Cliente cliente ){
-        return clientesRepository.save(cliente);
+        return clienteService.salvar(cliente);
     }
 
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete( @PathVariable Integer id ){
-        clientesRepository.findById(id)
-                .map( cliente -> {
-                    clientesRepository.delete(cliente );
-                    return cliente;
-                })
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "Cliente não encontrado") );
+        clienteService.deletar(id);
 
     }
 
@@ -53,26 +44,12 @@ public class ClienteController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void update( @PathVariable Integer id,
                         @RequestBody Cliente cliente ){
-        clientesRepository
-                .findById(id)
-                .map( clienteExistente -> {
-                    cliente.setId(clienteExistente.getId());
-                    clientesRepository.save(cliente);
-                    return cliente;
-                }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                "Cliente não encontrado") );
+          clienteService.update(id, cliente);
     }
 
     @GetMapping
     public List<Cliente> find(Cliente filtro ){
-        ExampleMatcher matcher = ExampleMatcher
-                .matching()
-                .withIgnoreCase()
-                .withStringMatcher(
-                        ExampleMatcher.StringMatcher.CONTAINING );
-
-        Example example = Example.of(filtro, matcher);
-        return clientesRepository.findAll(example);
+        return clienteService.find(filtro);
     }
 
 }
