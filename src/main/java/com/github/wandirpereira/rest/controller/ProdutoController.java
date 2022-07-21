@@ -1,8 +1,7 @@
-package io.github.dougllasfps.rest.controller;
+package com.github.wandirpereira.rest.controller;
 
-import io.github.dougllasfps.domain.entity.Cliente;
-import io.github.dougllasfps.domain.entity.Produto;
-import io.github.dougllasfps.domain.repository.Produtos;
+import com.github.wandirpereira.domain.entity.Produto;
+import com.github.wandirpereira.domain.repository.ProdutosRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
@@ -18,27 +17,27 @@ import static org.springframework.http.HttpStatus.*;
 @RequestMapping("/api/produtos")
 public class ProdutoController {
 
-    private Produtos repository;
+    private ProdutosRepository produtosRepository;
 
-    public ProdutoController(Produtos repository) {
-        this.repository = repository;
+    public ProdutoController(ProdutosRepository produtosRepository) {
+        this.produtosRepository = produtosRepository;
     }
 
     @PostMapping
     @ResponseStatus(CREATED)
     public Produto save( @RequestBody @Valid Produto produto ){
-        return repository.save(produto);
+        return produtosRepository.save(produto);
     }
 
     @PutMapping("{id}")
     @ResponseStatus(NO_CONTENT)
     public void update( @PathVariable Integer id,
                         @RequestBody @Valid Produto produto ){
-        repository
+        produtosRepository
                 .findById(id)
                 .map( p -> {
                    produto.setId(p.getId());
-                   repository.save(produto);
+                    produtosRepository.save(produto);
                    return produto;
                 }).orElseThrow( () ->
                 new ResponseStatusException(HttpStatus.NOT_FOUND,
@@ -48,10 +47,10 @@ public class ProdutoController {
     @DeleteMapping("{id}")
     @ResponseStatus(NO_CONTENT)
     public void delete(@PathVariable Integer id){
-        repository
+        produtosRepository
                 .findById(id)
                 .map( p -> {
-                    repository.delete(p);
+                    produtosRepository.delete(p);
                     return Void.TYPE;
                 }).orElseThrow( () ->
                 new ResponseStatusException(HttpStatus.NOT_FOUND,
@@ -60,7 +59,7 @@ public class ProdutoController {
 
     @GetMapping("{id}")
     public Produto getById(@PathVariable Integer id){
-        return repository
+        return produtosRepository
                 .findById(id)
                 .orElseThrow( () ->
                 new ResponseStatusException(HttpStatus.NOT_FOUND,
@@ -76,6 +75,6 @@ public class ProdutoController {
                         ExampleMatcher.StringMatcher.CONTAINING );
 
         Example example = Example.of(filtro, matcher);
-        return repository.findAll(example);
+        return produtosRepository.findAll(example);
     }
 }
