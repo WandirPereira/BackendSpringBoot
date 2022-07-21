@@ -9,7 +9,7 @@ public interface IClienteService {
     Cliente buscarClienteById(Integer id );
     Cliente salvar( Cliente cliente );
     void deletar( Integer id );
-    void update( Integer id, Cliente cliente );
-    List<Cliente> find(Cliente filtro );
+    void atualizar(Integer id, Cliente cliente );
+    List<Cliente> pesquisar(Cliente filtro );
 
 }

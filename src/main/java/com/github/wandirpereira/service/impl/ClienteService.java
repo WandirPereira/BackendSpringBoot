@@ -47,7 +47,7 @@ public class ClienteService implements IClienteService {
     }
 
     @Override
-    public void update(Integer id, Cliente cliente) {
+    public void atualizar(Integer id, Cliente cliente) {
         clientesRepository
                 .findById(id)
                 .map( clienteExistente -> {
@@ -59,7 +59,7 @@ public class ClienteService implements IClienteService {
     }
 
     @Override
-    public List<Cliente> find(Cliente filtro) {
+    public List<Cliente> pesquisar(Cliente filtro) {
         ExampleMatcher matcher = ExampleMatcher
                 .matching()
                 .withIgnoreCase()

@@ -1,13 +1,9 @@
 package com.github.wandirpereira.rest.controller;
 
 import com.github.wandirpereira.domain.entity.Cliente;
-import com.github.wandirpereira.domain.repository.ClientesRepository;
 import com.github.wandirpereira.service.impl.ClienteService;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -44,12 +40,12 @@ public class ClienteController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void update( @PathVariable Integer id,
                         @RequestBody Cliente cliente ){
-          clienteService.update(id, cliente);
+          clienteService.atualizar(id, cliente);
     }
 
     @GetMapping
     public List<Cliente> find(Cliente filtro ){
-        return clienteService.find(filtro);
+        return clienteService.pesquisar(filtro);
     }
 
 }
