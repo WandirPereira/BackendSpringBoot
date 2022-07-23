@@ -1,5 +1,6 @@
 package com.github.wandirpereira.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.github.wandirpereira.domain.enums.StatusPedido;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,6 +25,7 @@ public class Pedido {
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
+   // @JsonIgnore
     private Cliente cliente;
 
     @Column(name = "data_pedido")
@@ -36,6 +38,7 @@ public class Pedido {
     @Column(name = "status")
     private StatusPedido status;
 
+    //@JsonIgnore
     @OneToMany(mappedBy = "pedido")
     private List<ItemPedido> itens;
 

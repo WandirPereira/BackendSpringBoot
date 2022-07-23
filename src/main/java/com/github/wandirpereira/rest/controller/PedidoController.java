@@ -62,7 +62,7 @@ public class PedidoController {
                 .nomeCliente(pedido.getCliente().getNome())
                 .total(pedido.getTotal())
                 .status(pedido.getStatus().name())
-                .items(converter(pedido.getItens()))
+                .itens(converter(pedido.getItens()))
                 .build();
     }
 
@@ -72,10 +72,16 @@ public class PedidoController {
         }
         return itens.stream().map(
                 item -> InformacaoItemPedidoDTO
-                            .builder().descricaoProduto(item.getProduto().getDescricao())
+                            .builder()
+                            .descricaoProduto(item.getProduto().getDescricao())
                             .precoUnitario(item.getProduto().getPreco())
                             .quantidade(item.getQuantidade())
                             .build()
         ).collect(Collectors.toList());
+    }
+
+    @GetMapping
+    public List<Pedido> find(Pedido filtro ){
+        return pedidoService.pesquisar(filtro);
     }
 }

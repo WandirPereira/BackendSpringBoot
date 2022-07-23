@@ -15,6 +15,8 @@ import com.github.wandirpereira.domain.repository.ClientesRepository;
 import com.github.wandirpereira.domain.repository.PedidosRepository;
 import com.github.wandirpereira.domain.repository.ProdutosRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,7 +29,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class PedidoService implements IPedidoService {
 
-    private final PedidosRepository repository;
+    private final PedidosRepository pedidosRepository;
     private final ClientesRepository clientesRepository;
     private final ProdutosRepository produtosRepository;
     private final ItemPedidoRepository repositoryItemPedidoRepository;
@@ -47,7 +49,7 @@ public class PedidoService implements IPedidoService {
         pedido.setStatus(StatusPedido.REALIZADO);
 
         List<ItemPedido> itemsPedido = converterItems(pedido, dto.getItens());
-        repository.save(pedido);
+        pedidosRepository.save(pedido);
         repositoryItemPedidoRepository.saveAll(itemsPedido);
         pedido.setItens(itemsPedido);
         return pedido;
@@ -55,19 +57,22 @@ public class PedidoService implements IPedidoService {
 
     @Override
     public Optional<Pedido> obterPedidoCompleto(Integer id) {
-        return repository.findByIdFetchItens(id);
+        return Optional.ofNullable(pedidosRepository
+                .findByIdFetchItens(id)
+                .orElseThrow(() -> new PedidoNaoEncontradoException()));
     }
 
     @Override
     @Transactional
     public void atualizaStatus( Integer id, StatusPedido statusPedido ) {
-        repository
+        pedidosRepository
                 .findById(id)
                 .map( pedido -> {
                     pedido.setStatus(statusPedido);
-                    return repository.save(pedido);
+                    return pedidosRepository.save(pedido);
                 }).orElseThrow(() -> new PedidoNaoEncontradoException() );
     }
+
 
     private List<ItemPedido> converterItems(Pedido pedido, List<ItemPedidoDTO> items){
         if(items.isEmpty()){
@@ -92,5 +97,18 @@ public class PedidoService implements IPedidoService {
                     return itemPedido;
                 }).collect(Collectors.toList());
 
+    }
+
+
+    @Override
+    public List<Pedido> pesquisar(Pedido filtro) {
+        ExampleMatcher matcher = ExampleMatcher
+                .matching()
+                .withIgnoreCase()
+                .withStringMatcher(
+                        ExampleMatcher.StringMatcher.CONTAINING );
+
+        Example example = Example.of(filtro, matcher);
+        return pedidosRepository.findAll(example);
     }
 }
