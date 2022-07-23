@@ -40,7 +40,7 @@ public class ClienteController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void update( @PathVariable Integer id,
                         @RequestBody Cliente cliente ){
-          clienteService.atualizar(id, cliente);
+        clienteService.atualizar(id, cliente);
     }
 
     @GetMapping
@@ -49,4 +49,3 @@ public class ClienteController {
     }
 
 }
-

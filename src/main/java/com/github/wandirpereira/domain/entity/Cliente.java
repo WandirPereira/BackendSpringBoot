@@ -8,11 +8,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity
-@Table( name="cliente")
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table( name = "cliente" )
 public class Cliente {
 
     @Id
@@ -27,16 +27,12 @@ public class Cliente {
     private String cpf;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "cliente")
+    @OneToMany( mappedBy = "cliente" , fetch = FetchType.LAZY )
     private Set<Pedido> pedidos;
 
-    public Cliente(String nome) {
-        this.nome = nome;
-    }
-
-    public Cliente(Integer id, String nome) {
+   public Cliente(Integer id, String nome) {
         this.id = id;
         this.nome = nome;
     }
 
-   }
+}

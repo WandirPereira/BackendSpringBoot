@@ -7,7 +7,10 @@ import com.github.wandirpereira.rest.dto.PedidoDTO;
 import java.util.Optional;
 
 public interface IPedidoService {
-    Pedido salvar( PedidoDTO dto );
+    Pedido salvar(PedidoDTO dto);
+
     Optional<Pedido> obterPedidoCompleto(Integer id);
+
     void atualizaStatus(Integer id, StatusPedido statusPedido);
+
 }

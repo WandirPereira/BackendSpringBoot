@@ -1,8 +1,8 @@
 package com.github.wandirpereira.service.impl;
 
 import com.github.wandirpereira.domain.entity.Produto;
-import com.github.wandirpereira.domain.repository.ProdutosRepository;
 import com.github.wandirpereira.service.IProdutoService;
+import com.github.wandirpereira.domain.repository.ProdutosRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
@@ -15,7 +15,7 @@ public class ProdutoService implements IProdutoService {
 
     private final ProdutosRepository produtosRepository;
 
-      public ProdutoService(ProdutosRepository produtosRepository) {
+    public ProdutoService(ProdutosRepository produtosRepository) {
         this.produtosRepository = produtosRepository;
     }
 

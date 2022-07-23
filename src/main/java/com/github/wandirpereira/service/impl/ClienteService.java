@@ -23,7 +23,7 @@ public class ClienteService implements IClienteService {
 
     @Override
     public Cliente buscarClienteById(Integer id) {
-          return clientesRepository
+        return clientesRepository
                 .findById(id)
                 .orElseThrow(() ->
                         new ResponseStatusException(HttpStatus.NOT_FOUND,
@@ -55,7 +55,7 @@ public class ClienteService implements IClienteService {
                     clientesRepository.save(cliente);
                     return cliente;
                 }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "Cliente não encontrado") );
+                "Cliente não encontrado") );
     }
 
     @Override

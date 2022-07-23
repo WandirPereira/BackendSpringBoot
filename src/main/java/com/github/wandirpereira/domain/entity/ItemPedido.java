@@ -6,11 +6,11 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "item_pedido")
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 public class ItemPedido {
 
     @Id
@@ -28,5 +28,6 @@ public class ItemPedido {
 
     @Column
     private Integer quantidade;
+
 
 }

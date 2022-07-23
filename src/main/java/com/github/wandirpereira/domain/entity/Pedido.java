@@ -1,5 +1,6 @@
 package com.github.wandirpereira.domain.entity;
 
+import com.github.wandirpereira.domain.enums.StatusPedido;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,11 +10,11 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "pedido")
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 public class Pedido {
 
     @Id
@@ -28,8 +29,12 @@ public class Pedido {
     @Column(name = "data_pedido")
     private LocalDate dataPedido;
 
-    @Column(name = "total",  precision = 20, scale = 2)
+    @Column(name = "total", precision = 20, scale = 2)
     private BigDecimal total;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private StatusPedido status;
 
     @OneToMany(mappedBy = "pedido")
     private List<ItemPedido> itens;
