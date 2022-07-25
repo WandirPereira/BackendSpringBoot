@@ -23,6 +23,7 @@ public class ProdutoController {
     @PostMapping
     @ResponseStatus(CREATED)
     public Produto save( @RequestBody @Valid Produto produto ){
+
         return produtoService.salvar(produto);
     }
 
