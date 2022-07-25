@@ -1,5 +1,7 @@
 package com.github.wandirpereira.config;
 
+import com.github.wandirpereira.security.jwt.JwtAuthFilter;
+import com.github.wandirpereira.security.jwt.JwtService;
 import com.github.wandirpereira.service.impl.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
