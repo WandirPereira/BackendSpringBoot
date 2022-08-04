@@ -25,7 +25,7 @@ public class SwaggerConfig {
                 .useDefaultResponseMessages(false)
                 .select()
                 .apis(RequestHandlerSelectors
-                        .basePackage("io.github.dougllasfps.rest.controller"))
+                        .basePackage("com.github.wandirpereira.rest.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .securityContexts(Arrays.asList(securityContext()))
@@ -43,9 +43,9 @@ public class SwaggerConfig {
     }
 
     private Contact contact(){
-        return new Contact("Dougllas Sousa"
-                , "http://github.com/cursodsousa",
-                "dougllasfps@gmail.com");
+        return new Contact("Wandir Pereira"
+                , "http://github.com/wandirpereira",
+                "wandir@gmail.com");
     }
 
     public ApiKey apiKey(){
